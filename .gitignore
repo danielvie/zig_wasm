@@ -1,0 +1,6 @@
+*.wasm
+*.wat
+*.zon
+*.o
+.zig-cache
+zig-out
