@@ -1,6 +1,5 @@
 *.wasm
 *.wat
-*.zon
 *.o
 
 .zig-cache/
