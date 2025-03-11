@@ -8,13 +8,9 @@ tasks:
   main:
     cmds:
      - zig build
-     - wasm2wat zig-out/lib/math.wasm -o math.wat
+    #  - wasm2wat zig-out/lib/math.wasm -o math.wat
+     - bun index.ts
 
-  fib:
-    cmds:
-     - zig build-exe src/fibonacci.zig -target wasm32-freestanding -rdynamic
-     - wasm2wat fibonacci.wasm -o fib.wat
-     
   clean:
     aliases: ['c']
     cmds:

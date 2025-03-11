@@ -2,5 +2,7 @@
 *.wat
 *.zon
 *.o
-.zig-cache
-zig-out
+
+.zig-cache/
+zig-out/
+node_modules/
