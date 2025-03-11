@@ -8,7 +8,7 @@ export fn times2(a: i32) i32 {
 }
 
 export fn hello() [*]const u8 {
-    const str = "hello you!!"; // null terminated string
+    const str = "hello you!!\x00"; // null terminated string
     return str;
 }
 

@@ -37,10 +37,12 @@ async function run() {
     // reading string pointer
     const stringPtr = wasm.hello();
     const memory = new Uint8Array(wasm.memory.buffer);
+    let endPtr = stringPtr;
+    while (memory[endPtr] !== 0) endPtr++;
 
     // decoding string
     const decoder = new TextDecoder('utf-8')
-    const str = decoder.decode(memory.subarray(stringPtr))
+    const str = decoder.decode(memory.subarray(stringPtr, endPtr))
 
     console.log(`str = '${str}'`);
 } 
